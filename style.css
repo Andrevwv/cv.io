@@ -1,0 +1,174 @@
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background: gray;
+  background-image: url('abstrakt-figury-oboi.jpg');
+  background-attachment: fixed;
+  background-size: 100% 150%;
+  background-repeat: no-repeat;
+  color: white;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.main__block {
+  display: flex;
+  width: 50%;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0,0,0,0.6);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-top: 100px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+.main__photo {
+  border-radius: 50%;
+  height: 100px;
+  padding: 20px;
+  filter: contrast(1.2);
+  transition: all 0.5s;
+}
+
+.education,
+.profile,
+.skills,
+.experience {
+  flex-grow: 1;
+}
+
+.main__photo:hover {
+  transform: scale(1.2);
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu li {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+
+.menu li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 10px 20px 20px 20px;
+
+
+}
+
+.menu li a:hover,
+.current-menu-item {
+  background-color: rgb(0, 118, 170);
+}
+
+.menu li a:active {
+  background-color: rgb(0, 98, 142);
+  box-shadow: 0 -2px 2px 1px rgb(2, 46, 76) inset;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.disabled {
+  visibility: hidden;
+  position: absolute;
+  font-size: 0;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-content: flex-end;
+  background-color: rgba(0,0,0,0.8);
+  margin-top: auto;
+  width: 100%;
+}
+
+.social {
+  width: 26px;
+  height: 26px;
+  margin-right: 25px;
+  background-image: url("spritesheet.png");
+}
+
+.mail {
+  width: 24px;
+  height: 24px;
+  background-position: -39px -5px;
+}
+
+.facebook {
+  width: 24px;
+  height: 24px;
+  background-position: -5px -39px;
+}
+
+.linkedin {
+  width: 24px;
+  height: 24px;
+  background-position: -73px -39px;
+}
+
+.github {
+  width: 24px;
+  height: 24px;
+  background-position: -39px -39px;
+}
+
+.button__image {
+  background-image: url("spritesheet.png");
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 26px;
+  margin-bottom: 5px;
+}
+
+.profile__button .button__image {
+  width: 24px;
+  height: 24px;
+  background-position: -73px -5px;}
+
+.education__button .button__image {
+  width: 24px;
+  height: 24px;
+  background-position: -5px -5px;
+}
+
+.skills__button .button__image {
+  width: 24px;
+  height: 24px;
+  background-position: -39px -73px;
+}
+
+.experience__button .button__image {
+  width: 24px;
+  height: 24px;
+  background-position: -5px -73px;
+}
