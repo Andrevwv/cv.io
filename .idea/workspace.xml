@@ -20,7 +20,7 @@
       <file leaf-file-name="resume.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resume.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
+            <state relative-caret-position="396">
               <caret line="63" column="13" lean-forward="false" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
               <folding />
             </state>
@@ -30,8 +30,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-850">
-              <caret line="25" column="19" lean-forward="false" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+            <state relative-caret-position="175">
+              <caret line="75" column="19" lean-forward="false" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -59,8 +59,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ReferenceError</find>
-      <find>disabl</find>
       <find>background-color</find>
       <find>spritesheet.png</find>
       <find>background</find>
@@ -77,12 +75,20 @@
       <find>hover</find>
       <find>transit</find>
       <find>transitio</find>
-      <find>menu</find>
       <find>overflow: hidden;</find>
       <find>background-color: rg</find>
       <find>utton__image</find>
       <find>menu_</find>
       <find>curr</find>
+      <find>erflow: hid</find>
+      <find>menu li</find>
+      <find>current</find>
+      <find>background-color: rgb(0, 118, 170</find>
+      <find>menu</find>
+      <find>width</find>
+      <find>padding</find>
+      <find>margin</find>
+      <find>px</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -188,12 +194,12 @@
       <workItem from="1520236673814" duration="5879000" />
       <workItem from="1520244492240" duration="284000" />
       <workItem from="1520244800124" duration="797000" />
-      <workItem from="1520245620240" duration="16529000" />
+      <workItem from="1520245620240" duration="20688000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52534000" />
+    <option name="totallyTimeSpent" value="56693000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -471,7 +477,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resume.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
+        <state relative-caret-position="396">
           <caret line="63" column="13" lean-forward="false" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
           <folding />
         </state>
@@ -479,8 +485,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-850">
-          <caret line="25" column="19" lean-forward="false" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+        <state relative-caret-position="175">
+          <caret line="75" column="19" lean-forward="false" selection-start-line="75" selection-start-column="17" selection-end-line="75" selection-end-column="19" />
           <folding />
         </state>
       </provider>
