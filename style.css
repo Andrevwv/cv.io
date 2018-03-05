@@ -5,29 +5,37 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
   background: gray;
   background-image: url('abstrakt-figury-oboi.jpg');
   background-attachment: fixed;
   background-size: 100% 150%;
   background-repeat: no-repeat;
-  color: white;
+  color: #B9B8B6;
   align-items: center;
   padding: 0;
   margin: 0;
+  font-family: 'Scada', sans-serif;
 }
 
 .main__block {
   display: flex;
-  width: 50%;
   flex-grow: 1;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  max-width: 760px;
   background-color: rgba(0,0,0,0.6);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   margin-top: 100px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 10%;
+  padding-left: 10%;
 }
 
 header {
@@ -55,7 +63,7 @@ header {
 }
 
 a {
-  color: white;
+  color: #B9B8B6;
   text-decoration: none;
 }
 
@@ -65,34 +73,63 @@ a {
   justify-content: center;
   align-items: center;
   list-style-type: none;
+  margin-right: 3px;
 }
 
-.menu li a {
+.menu__button {
+  z-index: 100;
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
   padding: 10px 20px 20px 20px;
-
-
+  min-height: 50px;
 }
 
-.menu li a:hover,
+.menu__button:before {
+  visibility: hidden;
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: -120%;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  height: 120%;
+  background-color: rgb(0, 118, 170);
+  transition: transform 0.4s;
+  transition-timing-function: cubic-bezier(.45, 0, .33, 1.5);
+}
+
+.menu-text {
+  z-index: 2;
+}
+
+.menu li a:hover:not(.current-menu-item):before {
+  visibility: visible;
+  transform: translateY(84%);
+}
+
 .current-menu-item {
   background-color: rgb(0, 118, 170);
 }
 
-.menu li a:active {
+.current-menu-item .button__image{
+  transform: translateY(-7px);
+}
+
+.menu li a:active:before{
   background-color: rgb(0, 98, 142);
   box-shadow: 0 -2px 2px 1px rgb(2, 46, 76) inset;
 }
 
 .menu {
+  overflow: hidden;
   display: flex;
   flex-wrap: wrap;
-  padding: 0;
+  padding: 0 0 10px 0;
   margin: 0;
 }
 
@@ -143,11 +180,25 @@ footer {
 }
 
 .button__image {
+  margin-top: auto;
+  transition: all 0.2s;
+  transition-timing-function: cubic-bezier(0.42,0,0.58,1);
+}
+
+.menu__button:hover .button__image {
+  transform: translateY(-7px);
+}
+
+.skills__button:hover .button__image {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+
+.button__image {
   background-image: url("spritesheet.png");
   background-repeat: no-repeat;
   width: 26px;
   height: 26px;
-  margin-bottom: 5px;
 }
 
 .profile__button .button__image {

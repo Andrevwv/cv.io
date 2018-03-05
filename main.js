@@ -1,11 +1,10 @@
 (function () {
-
-  var contentBlocks = document.querySelectorAll('.main__block > section');
-  var mainMenu = document.querySelectorAll('ul.menu');
+  var mainBlockSections = document.querySelectorAll('.content > section');
+  var mainMenuItems = document.querySelectorAll('ul.menu li a');
 
     /**
-     * Добавляет всем дочерним элементам переданного массиваэлементам класс disabled
-     * @param {array} nodesArray массив с нодами
+     * Adding class disabled to all child nodes of array
+     * @param {array} nodesArray array with nodes
       */
   var addDisabledClass = function (nodesArray) {
       for (var i = 1; i < nodesArray.length; i++) {
@@ -15,17 +14,30 @@
       }
   };
 
-  for (var j = 0; j < mainMenu.length; j++) {
-      mainMenu[j].addEventListener('click', function (evt) {
-          var mainMenu = document.querySelectorAll('ul.menu');
-          addDisabledClass(contentBlocks);
-          if (evt.target.tagName.toLowerCase() === 'div') {
-              document.querySelector('section.' + evt.target.parentNode.dataset.id).classList.remove('disabled');
-              evt.target.classList.add('current-menu-item');
-          } else {
-              document.querySelector('section.' + evt.target.dataset.id).classList.remove('disabled');
-              evt.target.classList.add('current-menu-item');
+    /**
+     * Removes current-menu-item class from non-active menu item
+     */
+  var removeCurrentItemClass = function () {
+      for (var i = 0; i < mainMenuItems.length; i++) {
+          if (mainMenuItems[i].classList.contains('current-menu-item')) {
+              mainMenuItems[i].classList.remove('current-menu-item');
           }
-      });
-  }
+      }
+  };
+
+    /**
+     * Function changes information block corresponding to menu item pressed
+     */
+  var changeSection = function () {
+       for (var j = 0; j < mainMenuItems.length; j++) {
+          mainMenuItems[j].addEventListener('click', function (evt) {
+              addDisabledClass(mainBlockSections);
+              document.querySelector('section.' + evt.currentTarget.dataset.id).classList.remove('disabled');
+              removeCurrentItemClass();
+              evt.currentTarget.classList.add('current-menu-item');
+          });
+      }
+  };
+
+  changeSection();
 })();
