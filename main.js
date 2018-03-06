@@ -3,7 +3,7 @@
   var mainMenuItems = document.querySelectorAll('ul.menu li a');
 
     /**
-     * Adding class disabled to all child nodes of array
+     * Adding class disabled  to all child nodes of array
      * @param {array} nodesArray array with nodes
       */
   var addDisabledClass = function (nodesArray) {
