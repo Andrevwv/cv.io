@@ -8,8 +8,8 @@ body {
   flex-direction: column;
   background: gray;
   background-image: url('abstrakt-figury-oboi.jpg');
-  background-attachment: fixed;
   background-size: 100% 150%;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   color: #B9B8B6;
   align-items: center;
@@ -18,13 +18,22 @@ body {
   font-family: 'Scada', sans-serif;
 }
 
+h1  {
+  font-size: 2em;
+  font-weight: 100;
+  padding: 0;
+  margin: 0;
+}
+
 .main__block {
   display: flex;
   flex-grow: 1;
+  text-align: center;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   max-width: 760px;
+  min-height: 600px;
   background-color: rgba(0,0,0,0.6);
   border-radius: 10px;
   margin-top: 5em;
@@ -35,6 +44,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 500px;
   padding-right: 5em;
   padding-left: 5em;
 }
@@ -46,20 +56,13 @@ header {
 
 .main__photo {
   border-radius: 50%;
-  height: 100px;
+  height: 130px;
   filter: contrast(1.2);
   transition: all 0.5s;
 }
 
-.education,
-.profile,
-.skills,
-.experience {
-  flex-grow: 1;
-}
-
 .main__photo:hover {
-  transform: scale(1.2);
+  transform: scale(1.3);
 }
 
 a {
@@ -73,7 +76,7 @@ a {
   justify-content: center;
   align-items: center;
   list-style-type: none;
-  margin-right: 3px;
+  margin-right: 0.3em;
 }
 
 .menu__button {
@@ -95,11 +98,11 @@ current-menu-item,
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
+  width: 100%;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   height: 100%;
-  background-color: rgb(0, 118, 170);
+  background-color: #ce4f4a;
   transform-origin: top;
   transform: scaleY(0);
   transition: transform 0.6s;
@@ -111,11 +114,11 @@ current-menu-item,
 }
 
 .menu li a:hover:not(.current-menu-item):before {
-  transform: scaleY(1);
+  transform: scaleY(0.99);
 }
 
 .current-menu-item {
-  background-color: rgb(0, 118, 170);
+  background-color: #ce4f4a;
 }
 
 .current-menu-item .button__image{
@@ -123,8 +126,8 @@ current-menu-item,
 }
 
 .menu li a:active:before{
-  background-color: rgb(0, 98, 142);
-  box-shadow: 0 -2px 2px 1px rgb(2, 46, 76) inset;
+  background-color: #c14e41;
+  box-shadow: 0 -2px 2px 1px #632e2c inset;
 }
 
 .menu {
@@ -139,6 +142,40 @@ current-menu-item,
   visibility: hidden;
   position: absolute;
   font-size: 0;
+}
+
+.profile p {
+  flex-grow: 1;
+}
+
+.education-image {
+  background-image: url("spritesheet.png");
+  background-repeat: no-repeat;
+  overflow: hidden;
+  width: 30px;
+  height: 30px;
+  margin-right: 2em;
+}
+
+.item {
+  display: flex;
+  margin-bottom: 1em;
+}
+
+.education-text {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.university {
+  text-align: justify;
+}
+
+.years {
+  text-align: left;
+  color: white;
 }
 
 footer {
@@ -206,24 +243,16 @@ footer {
 }
 
 .profile__button .button__image {
-  width: 24px;
-  height: 24px;
   background-position: -73px -5px;}
 
 .education__button .button__image {
-  width: 24px;
-  height: 24px;
   background-position: -5px -5px;
 }
 
 .skills__button .button__image {
-  width: 24px;
-  height: 24px;
   background-position: -39px -73px;
 }
 
 .experience__button .button__image {
-  width: 24px;
-  height: 24px;
   background-position: -5px -73px;
 }
