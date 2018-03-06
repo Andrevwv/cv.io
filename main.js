@@ -7,7 +7,7 @@
      * @param {array} nodesArray array with nodes
       */
   var addDisabledClass = function (nodesArray) {
-      for (var i = 1; i < nodesArray.length; i++) {
+      for (var i = 0; i < nodesArray.length; i++) {
           if (!nodesArray[i].classList.contains('disabled')) {
               nodesArray[i].classList.add('disabled');
           }
