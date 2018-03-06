@@ -5,14 +5,12 @@ html {
 
 body {
   display: flex;
-  flex-direction: column;
   background: gray;
   background-image: url('abstrakt-figury-oboi.jpg');
   background-size: 100% 150%;
   background-attachment: fixed;
   background-repeat: no-repeat;
   color: #B9B8B6;
-  align-items: center;
   padding: 0;
   margin: 0;
   font-family: 'Scada', sans-serif;
@@ -31,22 +29,20 @@ h1  {
   text-align: center;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  margin: 5em auto 2em auto;
   max-width: 760px;
   min-height: 600px;
   background-color: rgba(0,0,0,0.6);
   border-radius: 10px;
-  margin-top: 5em;
-  margin-bottom: 2em;
 }
 
 .content {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   align-items: center;
-  min-width: 500px;
-  padding-right: 5em;
-  padding-left: 5em;
+  padding-right: 4em;
+  padding-left: 4em;
 }
 
 header {
@@ -57,6 +53,7 @@ header {
 .main__photo {
   border-radius: 50%;
   height: 130px;
+  margin: 1em 0;
   filter: contrast(1.2);
   transition: all 0.5s;
 }
@@ -73,6 +70,7 @@ a {
 .menu li {
   display: flex;
   flex-grow: 1;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   list-style-type: none;
@@ -92,7 +90,6 @@ a {
   min-height: 50px;
 }
 
-current-menu-item,
 .menu__button:before {
   content: "";
   position: absolute;
@@ -109,6 +106,23 @@ current-menu-item,
   transition-timing-function: cubic-bezier(0, 0, .1, 1.5);
 }
 
+.current-menu-item:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  height: 100%;
+  background-color: #ce4f4a;
+  transform-origin: top;
+  transform: scaleY(1);
+  transition: transform 0.6s;
+  transition-timing-function: cubic-bezier(0, 0, .1, 1.5);
+}
+
+
 .menu-text {
   z-index: 2;
 }
@@ -116,18 +130,13 @@ current-menu-item,
 .menu li a:hover:not(.current-menu-item):before {
   transform: scaleY(0.99);
 }
-
-.current-menu-item {
-  background-color: #ce4f4a;
-}
-
 .current-menu-item .button__image{
   transform: translateY(-7px);
 }
 
-.menu li a:active:before{
-  background-color: #c14e41;
-  box-shadow: 0 -2px 2px 1px #632e2c inset;
+.menu__button:active:not(.current-menu-item):before{
+  background-color: #a8413c;
+  box-shadow: 0 -2px 2px 1px #512725 inset;
 }
 
 .menu {
@@ -220,12 +229,6 @@ footer {
   background-position: -39px -39px;
 }
 
-.button__image {
-  margin-top: auto;
-  transition: all 0.2s;
-  transition-timing-function: cubic-bezier(0.42,0,0.58,1);
-}
-
 .menu__button:hover .button__image {
   transform: translateY(-7px);
 }
@@ -240,6 +243,9 @@ footer {
   background-repeat: no-repeat;
   width: 26px;
   height: 26px;
+  margin-top: auto;
+  transition: all 0.2s;
+  transition-timing-function: cubic-bezier(0.42,0,0.58,1);
 }
 
 .profile__button .button__image {
