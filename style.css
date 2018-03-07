@@ -26,7 +26,7 @@ h1  {
 
 }
 
-.main__block {
+.main {
   display: flex;
   flex-grow: 1;
   text-align: center;
@@ -112,7 +112,7 @@ a {
   transition-timing-function: cubic-bezier(0, 0, .1, 1.5);
 }
 
-.current-menu-item:before {
+.menu__button--current:before {
   content: "";
   position: absolute;
   top: 0;
@@ -129,18 +129,18 @@ a {
 }
 
 
-.menu-text {
+.menu__button__text {
   z-index: 2;
 }
 
-.menu__button:hover:not(.current-menu-item):before {
+.menu__button:hover:not(.menu__button--current):before {
   transform: scaleY(0.99);
 }
-.current-menu-item .button__image{
+.menu__button--current .menu__button__image{
   transform: translateY(-7px);
 }
 
-.menu__button:active:not(.current-menu-item):before{
+.menu__button:active:not(.menu__button--current):before{
   background-color: #a8413c;
   box-shadow: 0 -2px 2px 1px #512725 inset;
 }
@@ -162,18 +162,18 @@ a {
   opacity: 0;
 }
 
-.profile,
-.skills,
-.experience,
-.education{
+.content__profile,
+.content__skills,
+.content__experience,
+.content__education{
   transition: transform 0.5s, opacity 0.5s;
 }
 
-.profile p {
+.content__profile p {
   flex-grow: 1;
 }
 
-.education-image {
+.item__education__image {
   background-image: url("spritesheet.png");
   background-repeat: no-repeat;
   overflow: hidden;
@@ -187,7 +187,7 @@ a {
   margin-bottom: 1em;
 }
 
-.item-text {
+.item__text {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -213,8 +213,8 @@ footer {
   width: 100%;
 }
 
-.profile p,
-.experience p {
+.content__profile p,
+.content__experience p {
   margin-bottom: 1em;
 }
 
@@ -249,16 +249,16 @@ footer {
   background-position: -39px -39px;
 }
 
-.menu__button:hover .button__image {
+.menu__button:hover .menu__button__image {
   transform: translateY(-7px);
 }
 
-.skills__button:hover .button__image {
+.skills__button:hover .menu__button__image {
   transform: translateY(-7px) rotate(-45deg);
 }
 
 
-.button__image {
+.menu__button__image {
   background-image: url("spritesheet.png");
   background-position: -5px -5px;
   background-repeat: no-repeat;
@@ -269,18 +269,18 @@ footer {
   transition-timing-function: cubic-bezier(0.42,0,0.58,1);
 }
 
-.profile__button .button__image {
+.profile__button .menu__button__image {
   background-position: -73px -5px;}
 
-.education__button .button__image {
+.education__button .menu__button__image {
   background-position: -5px -5px;
 }
 
-.skills__button .button__image {
+.skills__button .menu__button__image {
   background-position: -39px -73px;
 }
 
-.experience__button .button__image {
+.experience__button .menu__button__image {
   background-position: -5px -73px;
 }
 
