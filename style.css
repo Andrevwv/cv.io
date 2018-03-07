@@ -42,6 +42,7 @@ h1  {
 .content {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   flex-grow: 1;
   align-items: center;
   padding: 1em 4em;
@@ -83,6 +84,7 @@ a {
   z-index: 100;
   display: flex;
   position: relative;
+  cursor: pointer;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
@@ -96,6 +98,8 @@ a {
   content: "";
   position: absolute;
   top: 0;
+  font-weight: inherit;
+  font-size: inherit;
   left: 0;
   width: 100%;
   border-bottom-right-radius: 10px;
@@ -129,7 +133,7 @@ a {
   z-index: 2;
 }
 
-.menu li a:hover:not(.current-menu-item):before {
+.menu__button:hover:not(.current-menu-item):before {
   transform: scaleY(0.99);
 }
 .current-menu-item .button__image{
@@ -149,9 +153,20 @@ a {
 }
 
 .disabled {
-  visibility: hidden;
   position: absolute;
-  font-size: 0;
+  display: flex;
+  max-width: calc(760px - 8em);
+  flex-direction: column;
+  transform: translateY(50px);
+  z-index: -1;
+  opacity: 0;
+}
+
+.profile,
+.skills,
+.experience,
+.education{
+  transition: transform 0.5s, opacity 0.5s;
 }
 
 .profile p {
@@ -198,6 +213,7 @@ footer {
   width: 100%;
 }
 
+.profile p,
 .experience p {
   margin-bottom: 1em;
 }
