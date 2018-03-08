@@ -4,6 +4,9 @@
   var mainBlock = document.querySelector('.main');
   var menu = document.querySelector('.menu');
   var footer = document.querySelector('footer');
+  var content = document.querySelector('.content');
+  var menuHeight = menu.offsetHeight;
+  var footerHeight = footer.offsetHeight;
 
     /**
      * Adding class disabled  to all child nodes of array
@@ -32,12 +35,12 @@
   };
 
   var setMainBlockHeight = function (activeBlock, mainBlockHeight, oldBlock) {
-      if (activeBlock.offsetHeight > 200) {
-          mainBlock.style.height = mainBlockHeight + (activeBlock.offsetHeight - oldBlock.offsetHeight ) + 'px';
-      } else {
-          mainBlock.style.height = activeBlock.offsetHeight + menu.offsetHeight + footer.offsetHeight + 'px';
-
-      }
+      // if (activeBlock.offsetHeight > 200) {
+      //     mainBlock.style.height = mainBlockHeight + (activeBlock.offsetHeight - oldBlock.offsetHeight ) + 'px';
+      // } else {
+      console.log(activeBlock.parentNode.offsetHeight);
+          mainBlock.style.height = activeBlock.parentNode.offsetHeight + menuHeight + footerHeight + 'px';
+      // }
   };
 
     /**

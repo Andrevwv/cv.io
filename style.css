@@ -1,3 +1,7 @@
+:root {
+  --button-background-color: blue;
+}
+
 html {
   height: 100%;
 }
@@ -17,7 +21,8 @@ body {
 
 *::selection {
   color: white;
-  background: rgba(206, 79, 74, 0.9);
+  background-color: var(--button-background-color, #ce4f4a);
+  filter: brightness(150%);
 }
 
 h1  {
@@ -105,7 +110,7 @@ a {
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   height: 100%;
-  background-color: #ce4f4a;
+  background-color: var(--button-background-color, #ce4f4a);
   transform-origin: top;
   transform: scaleY(0);
   transition: transform 0.6s;
@@ -121,7 +126,7 @@ a {
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   height: 100%;
-  background-color: #ce4f4a;
+  background-color: var(--button-background-color, #ce4f4a);
   transform-origin: top;
   transform: scaleY(1);
   transition: transform 0.6s;
@@ -141,8 +146,9 @@ a {
 }
 
 .menu__button:active:not(.menu__button--current):before{
-  background-color: #a8413c;
-  box-shadow: 0 -2px 2px 1px #512725 inset;
+  background-color: var(--button-background-color, #ce4f4a);
+  filter: brightness(70%);
+  box-shadow: 0 -2px 2px 1px rgba(0, 0, 0, 0.5) inset;
 }
 
 .menu {
