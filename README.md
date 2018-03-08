@@ -1,10 +1,14 @@
 # cv.io
 
-That's my CV Website. Now it's on the stage of production
+<h1>That's my CV Website.</h1>
+<br>
+Now it's on the stage of production.
+<br>
+Made with:
+<ul>
+<li> Flex </li>
+<li> JavaScript</li>
+<li> Transitions</li>
+  </ul>
 
-Made with: 
-- Flex
-- JavaScript
-- Transitions
-
-Want to view the site? Here is the link https://andrevwv.github.io/cv.io/
+Want to view the site? Here is the <a href="https://andrevwv.github.io/cv.io/">link</a>.
