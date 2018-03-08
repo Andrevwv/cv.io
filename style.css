@@ -1,18 +1,32 @@
 :root {
-  --button-background-color: blue;
+  --main-color: #ce4f4a;
+  --selection-color: rgba(206, 79, 74, 0.99);
 }
 
 html {
   height: 100%;
 }
 
+.background {
+  z-index: -1;
+  position: absolute;
+  background:
+          linear-gradient(#ffffff, var(--main-color, #ce4f4a));
+  display: flex;
+  filter: blur(100px);
+  width: 100%;
+  height: 100%;
+}
+
 body {
   display: flex;
   background: gray;
-  background-image: url('abstrakt-figury-oboi.jpg');
-  background-size: 100% 150%;
+  /*background-image: url('abstrakt-figury-oboi.jpg');*/
+  background-size: 100% 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  background-image:
+          linear-gradient(#ffffff, var(--main-color, #ce4f4a));
   color: #B9B8B6;
   font-family: 'Scada', sans-serif;
   font-size: 22px;
@@ -22,8 +36,13 @@ body {
 *::selection {
   color: white;
   background-color: #ce4f4a;
-  background-color: var(--button-background-color, #ce4f4a);
-  filter: brightness(150%);
+  background-color: var(--selection-color, #ce4f4a);
+}
+
+*::-moz-selection {
+  color: white;
+  background-color: #ce4f4a;
+  background-color: var(--main-color, #ce4f4a);
 }
 
 h1  {
@@ -112,7 +131,7 @@ a {
   border-bottom-left-radius: 10px;
   height: 100%;
   background-color: #ce4f4a;
-  background-color: var(--button-background-color, #ce4f4a);
+  background-color: var(--main-color, #ce4f4a);
   transform-origin: top;
   transform: scaleY(0);
   transition: transform 0.6s;
@@ -129,7 +148,7 @@ a {
   border-bottom-left-radius: 10px;
   height: 100%;
   background-color: #ce4f4a;
-  background-color: var(--button-background-color, #ce4f4a);
+  background-color: var(--main-color, #ce4f4a);
   transform-origin: top;
   transform: scaleY(1);
   transition: transform 0.6s;
@@ -150,7 +169,7 @@ a {
 
 .menu__button:active:not(.menu__button--current):before{
   background-color: #ce4f4a;
-  background-color: var(--button-background-color, #ce4f4a);
+  background-color: var(--main-color, #ce4f4a);
   filter: brightness(70%);
   box-shadow: 0 -2px 2px 1px rgba(0, 0, 0, 0.5) inset;
 }
