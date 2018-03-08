@@ -7,6 +7,9 @@
   var content = document.querySelector('.content');
   var menuHeight = menu.offsetHeight;
   var footerHeight = footer.offsetHeight;
+  var themeButtons = document.querySelectorAll('.color-button');
+  var root = document.documentElement;
+  var background = document.querySelector('.background');
 
     /**
      * Adding class disabled  to all child nodes of array
@@ -59,7 +62,42 @@
           });
       }
   };
-  // mainBlock.style.height = mainBlock.offsetHeight + 'px';
 
+
+  var colorButtonClickHandler = function (evt) {
+      switch (evt.target.dataset.id) {
+          case 'red':
+              root.style.setProperty('--main-color', '#ce4f4a');
+              root.style.setProperty('--selection-color', 'rgba(206, 79, 74, 0.99)');
+              background.style.backgroundImage = 'linear-gradient(10deg, rgba(255, 255, 255, 0) 75%, #333 75%), linear-gradient(-10deg, rgba(255, 255, 255, 0) 75%, #333 75%), linear-gradient(-10deg, rgba(255, 255, 255, 0) 51%, #01a0e4 51%), linear-gradient(10deg, rgba(255, 255, 255, 0) 51%, #01a0e4 51%), linear-gradient(10deg, rgba(255, 255, 255, 0) 1%, #d13a29 1%), linear-gradient(-10deg, rgba(255, 255, 255, 0) 1%, #d13a29 1%)';
+              break;
+          case 'gray':
+              root.style.setProperty('--main-color', '#424242');
+              root.style.setProperty('--selection-color', 'rgba(66, 66, 66, 0.99)');
+              background.style.backgroundImage = 'linear-gradient(10deg, rgba(255, 255, 255, 0) 75%, #161616 75%), linear-gradient(-10deg, rgba(255, 255, 255, 0) 75%, #161616 75%), linear-gradient(-10deg, rgba(255, 255, 255, 0) 51%, #999999 51%), linear-gradient(10deg, rgba(255, 255, 255, 0) 51%, #999999 51%), linear-gradient(10deg, rgba(255, 255, 255, 0) 1%, #161616 1%), linear-gradient(-10deg, rgba(255, 255, 255, 0) 1%, #161616 1%)';
+              break;
+          case 'blue':
+              root.style.setProperty('--main-color', '#2C8BB8');
+              root.style.setProperty('--selection-color', 'rgba(0, 125, 188, 0.99)');
+              background.style.backgroundImage = 'linear-gradient(10deg, rgba(255, 255, 255, 0) 75%, #E42E77 75%), linear-gradient(-10deg, rgba(255, 255, 255, 0) 75%, #E42E77 75%), linear-gradient(-10deg, rgba(255, 255, 255, 0) 51%, #FFE833 51%), linear-gradient(10deg, rgba(255, 255, 255, 0) 51%, #FFE833 51%), linear-gradient(10deg, rgba(255, 255, 255, 0) 1%, #2C8AB8 1%), linear-gradient(-10deg, rgba(255, 255, 255, 0) 1%, #2C8AB8 1%)';
+              break;
+          case 'green':
+              root.style.setProperty('--main-color', '#5fb522');
+              root.style.setProperty('--selection-color', 'rgba(66, 188, 0, 0.99)');
+              background.style.backgroundImage = 'linear-gradient(10deg, rgba(255, 255, 255, 0) 75%, #48268C 75%), linear-gradient(-10deg, rgba(255, 255, 255, 0) 75%, #48268C 75%), linear-gradient(-10deg, rgba(255, 255, 255, 0) 51%, #CD9227 51%), linear-gradient(10deg, rgba(255, 255, 255, 0) 51%, #CD9227 51%), linear-gradient(10deg, rgba(255, 255, 255, 0) 1%, #5FB522 1%), linear-gradient(-10deg, rgba(255, 255, 255, 0) 1%, #5FB522 1%)';
+
+              break;
+
+      }
+  };
+
+  var addHandlerToThemeButtons = function () {
+      for (var i = 0; i < themeButtons.length; i++) {
+          themeButtons[i].addEventListener('click', colorButtonClickHandler);
+      }
+  };
+
+    addHandlerToThemeButtons();
+  // mainBlock.style.height = mainBlock.offsetHeight + 'px';
   changeSection();
 })();
