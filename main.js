@@ -63,7 +63,10 @@
       }
   };
 
-
+    /**
+     * Changes color scheme of the page, when color-button is clicked
+     * @param {event} evt
+     */
   var colorButtonClickHandler = function (evt) {
       switch (evt.target.dataset.id) {
           case 'red':
@@ -91,6 +94,9 @@
       }
   };
 
+    /**
+     * Addes handler to theme switch buttons
+     */
   var addHandlerToThemeButtons = function () {
       for (var i = 0; i < themeButtons.length; i++) {
           themeButtons[i].addEventListener('click', colorButtonClickHandler);
