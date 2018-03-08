@@ -21,6 +21,7 @@ body {
 
 *::selection {
   color: white;
+  background-color: #ce4f4a;
   background-color: var(--button-background-color, #ce4f4a);
   filter: brightness(150%);
 }
@@ -110,6 +111,7 @@ a {
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   height: 100%;
+  background-color: #ce4f4a;
   background-color: var(--button-background-color, #ce4f4a);
   transform-origin: top;
   transform: scaleY(0);
@@ -126,6 +128,7 @@ a {
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   height: 100%;
+  background-color: #ce4f4a;
   background-color: var(--button-background-color, #ce4f4a);
   transform-origin: top;
   transform: scaleY(1);
@@ -146,6 +149,7 @@ a {
 }
 
 .menu__button:active:not(.menu__button--current):before{
+  background-color: #ce4f4a;
   background-color: var(--button-background-color, #ce4f4a);
   filter: brightness(70%);
   box-shadow: 0 -2px 2px 1px rgba(0, 0, 0, 0.5) inset;
