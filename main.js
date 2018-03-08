@@ -1,5 +1,5 @@
 (function () {
-  var mainBlockSections = document.querySelectorAll('.content > section');
+  var mainBlockSections = document.querySelectorAll('.content > div');
   var mainMenuItems = document.querySelectorAll('.menu__button');
   var mainBlock = document.querySelector('.main');
   var menu = document.querySelector('.menu');
@@ -49,12 +49,12 @@
   var changeSection = function () {
        for (var j = 0; j < mainMenuItems.length; j++) {
           mainMenuItems[j].addEventListener('click', function (evt) {
-              var currentContentBlock = document.querySelector('section.content__' + evt.currentTarget.dataset.id);
+              var currentContentBlock = document.querySelector('div.content__' + evt.currentTarget.dataset.id);
               var mainBlockCurrentHeight = mainBlock.offsetHeight;
               addDisabledClass(mainBlockSections);
               currentContentBlock.classList.remove('disabled');
               var oldBlock = removeCurrentItemClass();
-              // setMainBlockHeight(currentContentBlock, mainBlockCurrentHeight, document.querySelector('section.' + oldBlock.dataset.id));
+              // setMainBlockHeight(currentContentBlock, mainBlockCurrentHeight, document.querySelector('div.' + oldBlock.dataset.id));
               evt.currentTarget.classList.add('menu__button--current');
           });
       }
