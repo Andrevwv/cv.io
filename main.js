@@ -10,6 +10,7 @@
   var themeButtons = document.querySelectorAll('.color-button');
   var root = document.documentElement;
   var background = document.querySelector('.background');
+  var mainPhoto = document.querySelector('.main__photo');
 
     /**
      * Adding class disabled  to all child nodes of array
@@ -73,22 +74,25 @@
               root.style.setProperty('--main-color', '#ce4f4a');
               root.style.setProperty('--selection-color', 'rgba(206, 79, 74, 0.99)');
               background.style.backgroundImage = 'linear-gradient(10deg, rgba(255, 255, 255, 0) 75%, #333 75%), linear-gradient(-10deg, rgba(255, 255, 255, 0) 75%, #333 75%), linear-gradient(-10deg, rgba(255, 255, 255, 0) 51%, #01a0e4 51%), linear-gradient(10deg, rgba(255, 255, 255, 0) 51%, #01a0e4 51%), linear-gradient(10deg, rgba(255, 255, 255, 0) 1%, #d13a29 1%), linear-gradient(-10deg, rgba(255, 255, 255, 0) 1%, #d13a29 1%)';
+              mainPhoto.style.filter = 'grayscale(0)';
               break;
           case 'gray':
               root.style.setProperty('--main-color', '#424242');
               root.style.setProperty('--selection-color', 'rgba(66, 66, 66, 0.99)');
               background.style.backgroundImage = 'linear-gradient(10deg, rgba(255, 255, 255, 0) 75%, #333 75%), linear-gradient(-10deg, rgba(255, 255, 255, 0) 75%, #333 75%), linear-gradient(-10deg, rgba(255, 255, 255, 0) 51%, #999999 51%), linear-gradient(10deg, rgba(255, 255, 255, 0) 51%, #999999 51%), linear-gradient(10deg, rgba(255, 255, 255, 0) 1%, #161616 1%), linear-gradient(-10deg, rgba(255, 255, 255, 0) 1%, #161616 1%)';
+              mainPhoto.style.filter = 'grayscale(0.9)';
               break;
           case 'blue':
               root.style.setProperty('--main-color', '#2C8BB8');
               root.style.setProperty('--selection-color', 'rgba(0, 125, 188, 0.99)');
-              background.style.backgroundImage = 'linear-gradient(10deg, rgba(255, 255, 255, 0) 75%, #333 75%), linear-gradient(-10deg, rgba(255, 255, 255, 0) 75%, #333 75%), linear-gradient(-10deg, rgba(255, 255, 255, 0) 51%, #FFE833 51%), linear-gradient(10deg, rgba(255, 255, 255, 0) 51%, #FFE833 51%), linear-gradient(10deg, rgba(255, 255, 255, 0) 1%, #2C8AB8 1%), linear-gradient(-10deg, rgba(255, 255, 255, 0) 1%, #2C8AB8 1%)';
+              background.style.backgroundImage = 'linear-gradient(10deg, rgba(255, 255, 255, 0) 75%, #333 75%), linear-gradient(-10deg, rgba(255, 255, 255, 0) 75%, #333 75%), linear-gradient(-10deg, rgba(255, 255, 255, 0) 51%, #9D4863 51%), linear-gradient(10deg, rgba(255, 255, 255, 0) 51%, #9D4863 51%), linear-gradient(10deg, rgba(255, 255, 255, 0) 1%, #113B63 1%), linear-gradient(-10deg, rgba(255, 255, 255, 0) 1%, #113B63 1%)';
+              mainPhoto.style.filter = 'grayscale(0)';
               break;
           case 'green':
               root.style.setProperty('--main-color', '#5fb522');
               root.style.setProperty('--selection-color', 'rgba(66, 188, 0, 0.99)');
-              background.style.backgroundImage = 'linear-gradient(10deg, rgba(255, 255, 255, 0) 75%, #333 75%), linear-gradient(-10deg, rgba(255, 255, 255, 0) 75%, #333 75%), linear-gradient(-10deg, rgba(255, 255, 255, 0) 51%, #CD9227 51%), linear-gradient(10deg, rgba(255, 255, 255, 0) 51%, #CD9227 51%), linear-gradient(10deg, rgba(255, 255, 255, 0) 1%, #5FB522 1%), linear-gradient(-10deg, rgba(255, 255, 255, 0) 1%, #5FB522 1%)';
-
+              background.style.backgroundImage = 'linear-gradient(10deg, rgba(255, 255, 255, 0) 75%, #333 75%), linear-gradient(-10deg, rgba(255, 255, 255, 0) 75%, #333 75%), linear-gradient(-10deg, rgba(255, 255, 255, 0) 51%, #C93 51%), linear-gradient(10deg, rgba(255, 255, 255, 0) 51%, #C93 51%), linear-gradient(10deg, rgba(255, 255, 255, 0) 1%, #393 1%), linear-gradient(-10deg, rgba(255, 255, 255, 0) 1%, #393 1%)';
+              mainPhoto.style.filter = 'grayscale(0)';
               break;
 
       }
