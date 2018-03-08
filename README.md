@@ -1,6 +1,6 @@
 # cv.io
 
-That's my site-CV. Now it's on the stage of production
+That's my CV Website. Now it's on the stage of production
 
 Made with: 
 - Flex
