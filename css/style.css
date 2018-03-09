@@ -11,7 +11,7 @@ html {
 
 .background {
   z-index: -1;
-  position: absolute;
+  position: fixed;
   background-image:
   linear-gradient(10deg, rgba(255, 255, 255, 0) 75%, #333 75%),
   linear-gradient(-10deg, rgba(255, 255, 255, 0) 75%, #333 75%),
@@ -169,13 +169,12 @@ a {
 .menu__button:hover:not(.menu__button--current):before {
   transform: scaleY(0.99);
 }
+
 .menu__button--current .menu__icon{
   transform: translateY(-7px);
 }
 
 .menu__button:active:not(.menu__button--current):before{
-  background-color: #ce4f4a;
-  background-color: var(--main-color, #ce4f4a);
   filter: brightness(70%);
   box-shadow: 0 -2px 2px 1px rgba(0, 0, 0, 0.5) inset;
 }
@@ -206,15 +205,6 @@ a {
 
 .content__profile p {
   flex-grow: 1;
-}
-
-.item__education__image {
-  background-image: url("../images/spritesheet.png");
-  background-repeat: no-repeat;
-  overflow: hidden;
-  width: 30px;
-  height: 30px;
-  margin-right: 2em;
 }
 
 .item {
@@ -290,7 +280,6 @@ footer {
 
 .menu__button:hover .menu__icon {
   transform: translateY(-7px);
-  color: white;
 }
 
 .skills__button:hover .menu__icon {
@@ -305,15 +294,7 @@ footer {
   transition-timing-function: cubic-bezier(0.42,0,0.58,1);
 }
 
-.experience-image {
-  background-image: url("../images/spritesheet.png");
-  background-repeat: no-repeat;
-  background-position: -5px -73px;
-  overflow: hidden;
-  width: 30px;
-  height: 30px;
-  margin-right: 2em;
-}
+
 
 
 @font-face {
@@ -414,4 +395,21 @@ footer {
 .facebook:hover,
 .mail:hover {
   --font-color: var(--main-color);
+}
+
+.experience-image {
+  display: flex;
+  font-size: 2em;
+  margin-right: 1em;
+  align-items: center;
+  color: var(--main-color);
+}
+
+.item__education__image {
+  display: flex;
+  align-items: center;
+  margin-right: 1em;
+  font-size: 2em;
+  font-weight: 600;
+  color: var(--main-color);
 }
