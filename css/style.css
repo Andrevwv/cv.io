@@ -2,6 +2,7 @@
   --main-color: #ce4f4a;
   --selection-color: rgba(206, 79, 74, 0.99);
   --background-color: #682320;
+  --font-color: #c6c6c6;
 }
 
 html {
@@ -11,11 +12,7 @@ html {
 .background {
   z-index: -1;
   position: absolute;
-  /*background:*/
-          /*linear-gradient(#ffffff, var(--main-color, #ce4f4a));*/
-
   background-image:
-  /*linear-gradient(#ffffff, var(--background-color, #afafaf));*/
   linear-gradient(10deg, rgba(255, 255, 255, 0) 75%, #333 75%),
   linear-gradient(-10deg, rgba(255, 255, 255, 0) 75%, #333 75%),
   linear-gradient(-10deg, rgba(255, 255, 255, 0) 51%, #01a0e4 51%),
@@ -35,15 +32,8 @@ body {
   background-size: 100% 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  /*background-image:*/
-    /*!*linear-gradient(#ffffff, var(--background-color, #afafaf));*!*/
-    /*linear-gradient(10deg, rgba(255, 255, 255, 0) 65%, #333 66%),*/
-    /*linear-gradient(-10deg, rgba(255, 255, 255, 0) 65%, #333 66%),*/
-    /*linear-gradient(-10deg, rgba(255, 255, 255, 0) 41%, #01a0e4 41%),*/
-    /*linear-gradient(10deg, rgba(255, 255, 255, 0) 41%, #01a0e4 41%),*/
-    /*linear-gradient(10deg, rgba(255, 255, 255, 0) 1%, #d13a29 1%),*/
-    /*linear-gradient(-10deg, rgba(255, 255, 255, 0) 1%, #d13a29 1%);*/
-  color: #B9B8B6;
+  color: #c6c6c6;
+  color: var(--font-color, #c6c6c6);
   font-family: 'Scada', sans-serif;
   font-size: 22px;
   line-height: 1.5;
@@ -179,7 +169,7 @@ a {
 .menu__button:hover:not(.menu__button--current):before {
   transform: scaleY(0.99);
 }
-.menu__button--current .menu__button__image{
+.menu__button--current .menu__icon{
   transform: translateY(-7px);
 }
 
@@ -294,69 +284,25 @@ footer {
 }
 
 .social {
-  width: 26px;
-  height: 26px;
   margin-right: 1em;
-  background-image: url("../images/spritesheet.png");
+  transition: all 0.5s;
 }
 
-.mail {
-  width: 24px;
-  height: 24px;
-  background-position: -39px -5px;
-}
-
-.facebook {
-  width: 24px;
-  height: 24px;
-  background-position: -5px -39px;
-}
-
-.linkedin {
-  width: 24px;
-  height: 24px;
-  background-position: -73px -39px;
-}
-
-.github {
-  width: 24px;
-  height: 24px;
-  background-position: -39px -39px;
-}
-
-.menu__button:hover .menu__button__image {
+.menu__button:hover .menu__icon {
   transform: translateY(-7px);
+  color: white;
 }
 
-.skills__button:hover .menu__button__image {
+.skills__button:hover .menu__icon {
   transform: translateY(-7px) rotate(-45deg);
 }
 
 
-.menu__button__image {
-  background-image: url("../images/spritesheet.png");
-  background-position: -5px -5px;
-  background-repeat: no-repeat;
-  width: 26px;
-  height: 26px;
+.menu__icon {
+  z-index: 100;
   margin-top: auto;
   transition: all 0.2s;
   transition-timing-function: cubic-bezier(0.42,0,0.58,1);
-}
-
-.profile__button .menu__button__image {
-  background-position: -73px -5px;}
-
-.education__button .menu__button__image {
-  background-position: -5px -5px;
-}
-
-.skills__button .menu__button__image {
-  background-position: -39px -73px;
-}
-
-.experience__button .menu__button__image {
-  background-position: -5px -73px;
 }
 
 .experience-image {
@@ -367,4 +313,105 @@ footer {
   width: 30px;
   height: 30px;
   margin-right: 2em;
+}
+
+
+@font-face {
+  font-family: 'fontello';
+  src: url('../fontello/font/fontello.eot?84513304');
+  src: url('../fontello/font/fontello.eot?84513304#iefix') format('embedded-opentype'),
+  url('../fontello/font/fontello.woff?84513304') format('woff'),
+  url('../fontello/font/fontello.ttf?84513304') format('truetype'),
+  url('../fontello/font/fontello.svg?84513304#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon
+{
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+
+  /* You can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-profile {
+  color: #c6c6c6;
+  color: var(--font-color, #c6c6c6);
+  font-size: 1.5em;
+}
+
+.icon-education {
+  color: #c6c6c6;
+  font-size: 1.5em;
+}
+
+.icon-skills {
+  color: #c6c6c6;
+  color: var(--font-color, #c6c6c6);
+  font-size: 1.5em;
+}
+
+.icon-experiance {
+  color: #c6c6c6;
+  color: var(--font-color, #c6c6c6);
+  font-size: 1.5em;
+}
+
+.mail {
+  color: #c6c6c6;
+  color: var(--font-color, #c6c6c6);
+  font-size: 1.5em;
+}
+
+.facebook {
+  color: #c6c6c6;
+  color: var(--font-color, #c6c6c6);
+  font-size: 1.5em;
+}
+
+.linkedin {
+  color: #c6c6c6;
+  color: var(--font-color, #c6c6c6);
+  font-size: 1.5em;
+}
+
+.github {
+  color: #c6c6c6;
+  color: var(--font-color, #c6c6c6);
+  font-size: 1.5em;
+}
+.github:hover,
+.linkedin:hover,
+.facebook:hover,
+.mail:hover {
+  --font-color: var(--main-color);
 }
