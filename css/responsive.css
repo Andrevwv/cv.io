@@ -21,7 +21,7 @@
 
 @media only screen and (max-device-width: 480px) {
     .main {
-        margin: 1em 0.2em;
+        margin: 1em 0.5em;
     }
 
     .theme,
@@ -36,6 +36,6 @@
     }
 
     .content {
-        padding: 0.5em auto;
+        padding: 0.5em 1em;
     }
 }

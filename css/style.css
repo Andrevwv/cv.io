@@ -28,10 +28,6 @@ html {
 body {
   display: flex;
   background: gray;
-  /*background-image: url('../images/abstrakt-figury-oboi.jpg');*/
-  background-size: 100% 100%;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
   color: #c6c6c6;
   color: var(--font-color, #c6c6c6);
   font-family: 'Scada', sans-serif;
@@ -266,6 +262,7 @@ a {
 footer {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   align-content: flex-end;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
