@@ -111,6 +111,11 @@ a {
   margin-right: 0.3em;
 }
 
+.menu li:first-child {
+  margin-left: 0.3em;
+}
+
+
 .menu__button {
   z-index: 100;
   display: flex;
