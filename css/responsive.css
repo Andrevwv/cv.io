@@ -38,4 +38,12 @@
     .content {
         padding: 0.5em 1em;
     }
+
+    .item__education__image {
+        margin-right: 0.5em;
+    }
+
+    .experience-image {
+        margin-right: 0.5em;
+    }
 }

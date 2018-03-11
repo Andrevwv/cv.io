@@ -107,11 +107,19 @@ a {
   align-items: center;
 }
 
-.css3 {
+.svg-css3 {
   fill: var(--main-color);
 }
 
-.html5 {
+.html5-item {
+  fill: var(--main-color);
+}
+
+.svg-javascript {
+  fill: var(--main-color);
+}
+
+.svg-java {
   fill: var(--main-color);
 }
 
@@ -133,19 +141,26 @@ a {
   transform: scale(2.2) translateY(-55%);
 }
 
+.skill-item.javascript-item:hover .svg-transform{
+  transform: scale(2) translateY(-67%);
+}
+
+.skill-item.java-item:hover .svg-transform{
+  transform: scale(2) translateY(-45%);
+}
+
 .svg-container {
   overflow: hidden;
 }
 
 .svg-transform {
   transition: all 0.5s;
-
 }
 
 .details {
   display: flex;
   flex-direction: column;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0,0,0,0.3);
   height: 20%;
   width: 100%;
   overflow: hidden;
@@ -300,7 +315,7 @@ a {
 }
 
 .place {
-  text-align: justify;
+  text-align: left;
 }
 
 .years {
