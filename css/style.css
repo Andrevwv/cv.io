@@ -97,6 +97,85 @@ a {
   text-decoration: none;
 }
 
+.content__skills {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 1em;
+  color: gray;
+  justify-content: space-around;
+  align-content: space-around;
+  align-items: center;
+}
+
+.css3 {
+  fill: var(--main-color);
+}
+
+.html5 {
+  fill: var(--main-color);
+}
+
+.skill-item {
+  margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  transition: transform 1s;
+  background-color: rgba(0,0,0,0.6);
+  border-radius: 10px;
+}
+
+.skill-item:hover .svg-transform{
+  transform-origin: top;
+  transform: scale(2.2) translateY(-55%);
+}
+
+.svg-container {
+  overflow: hidden;
+}
+
+.svg-transform {
+  transition: all 0.5s;
+
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0,0,0,0.6);
+  height: 20%;
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.5s;
+  align-items: flex-start;
+}
+.skill-name {
+  font-size: 1.2em;
+  align-self: center;
+}
+
+.skill-knowlage li{
+  transform: translatex(-150px);
+  font-size: 0.8em;
+  padding-left: 2em;
+
+}
+
+.skill-item:hover .skill-knowlage li {
+  text-align: left;
+  transform: translateX(0);
+  transition-timing-function: cubic-bezier(0, 1.5, 1, 1);
+  transition-duration: .5s;
+  transition-delay: 0.35s;
+}
+
+.skill-item:hover .details {
+  height: 300%;
+}
+
 .menu li {
   display: flex;
   flex-grow: 1;
@@ -189,7 +268,7 @@ a {
 
 .disabled {
   position: absolute;
-  display: flex;
+  display: none;
   max-width: calc(760px - 8em);
   flex-direction: column;
   transform: translateY(50px);
