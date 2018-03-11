@@ -46,4 +46,8 @@
     .experience-image {
         margin-right: 0.5em;
     }
+
+    .skill-item {
+        cursor: pointer;
+    }
 }
