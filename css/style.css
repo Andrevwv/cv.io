@@ -138,19 +138,18 @@ a {
 
 }
 
-.skill-item:hover .svg-transform,
-.skill-item:active .svg-transform{
+.skill-item:hover .svg-transform {
   transform-origin: top;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   transform: scale(2.2) translateY(-55%);
 }
 
-.skill-item.javascript-item:hover .svg-transform,
-.skill-item.javascript-item:active .svg-transform{
+.skill-item.javascript-item:hover .svg-transform {
   transform: scale(2) translateY(-67%);
 }
 
-.skill-item.java-item:hover .svg-transform,
-.skill-item.java-item:active .svg-transform{
+.skill-item.java-item:hover .svg-transform {
   transform: scale(2) translateY(-45%);
 }
 
@@ -183,8 +182,7 @@ a {
   padding-left: 2em;
 }
 
-.skill-item:hover .skill-knowlage li,
-.skill-item:active .skill-knowlage li {
+.skill-item:hover .skill-knowlage li {
   text-align: left;
   transform: translateX(0);
   transition-timing-function: cubic-bezier(0, 1.5, 1, 1);
