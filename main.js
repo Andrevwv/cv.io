@@ -7,7 +7,7 @@
   var content = document.querySelector('.content');
   var menuHeight = menu.offsetHeight;
   var footerHeight = footer.offsetHeight;
-  var themeButtons = document.querySelectorAll('.color-button');
+  var themeButtons = document.querySelectorAll('.theme__color-button');
   var root = document.documentElement;
   var background = document.querySelector('.background');
   var mainPhoto = document.querySelector('.main__photo');
