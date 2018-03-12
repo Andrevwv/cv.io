@@ -13,14 +13,17 @@ html {
   z-index: -1;
   position: fixed;
   background-image:
-  linear-gradient(10deg, rgba(255, 255, 255, 0) 75%, #333 75%),
-  linear-gradient(-10deg, rgba(255, 255, 255, 0) 75%, #333 75%),
-  linear-gradient(-10deg, rgba(255, 255, 255, 0) 51%, #01a0e4 51%),
-  linear-gradient(10deg, rgba(255, 255, 255, 0) 51%, #01a0e4 51%),
-  linear-gradient(10deg, rgba(255, 255, 255, 0) 1%, #d13a29 1%),
-  linear-gradient(-10deg, rgba(255, 255, 255, 0) 1%, #d13a29 1%);
+  /*linear-gradient(10deg, rgba(255, 255, 255, 0) 75%, #333 75%),*/
+  /*linear-gradient(-10deg, rgba(255, 255, 255, 0) 75%, #333 75%),*/
+  /*linear-gradient(-10deg, rgba(255, 255, 255, 0) 51%, #01a0e4 51%),*/
+  /*linear-gradient(10deg, rgba(255, 255, 255, 0) 51%, #01a0e4 51%),*/
+  /*linear-gradient(10deg, rgba(255, 255, 255, 0) 1%, #d13a29 1%),*/
+  /*linear-gradient(-10deg, rgba(255, 255, 255, 0) 1%, #d13a29 1%);*/
+          linear-gradient(217deg, rgba(1, 160, 228,.8), rgba(255,0,0,0) 70.71%),
+          linear-gradient(127deg, rgba(1, 160, 228,.8), rgba(0,255,0,0) 70.71%),
+          linear-gradient(336deg, rgba(209, 58, 41,.8), rgba(0,0,255,0) 70.71%);
   display: flex;
-  filter: blur(7em);
+  /*filter: blur(7em);*/
   width: 100%;
   height: 100%;
 }
@@ -189,16 +192,6 @@ header {
   transform: scale(1.2);
 }
 
-.content__skills {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 1em;
-  color: gray;
-  justify-content: space-around;
-  align-content: space-around;
-  align-items: center;
-}
-
 .svg-css3,
 .html5-item,
 .svg-javascript,
@@ -277,12 +270,15 @@ header {
 }
 
 .disabled {
-  position: absolute;
+  /*position: absolute;*/
+  /*width: 0;*/
+  height: 0;
+  visibility: hidden;
   /*display: none;*/
-  max-width: calc(760px - 8em);
-  flex-direction: column;
+  /*max-width: calc(760px - 8em);*/
+  /*flex-direction: column;*/
   transform: translateY(50px);
-  z-index: -1;
+  /*z-index: -1;*/
   opacity: 0;
 }
 
@@ -290,11 +286,26 @@ header {
 .content__skills,
 .content__experience,
 .content__education{
-  transition: transform 0.5s, opacity 0.5s;
+  transition: all 3s;
+}
+
+.content__skills {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 1em;
+  color: gray;
+  justify-content: space-around;
+  align-content: space-around;
+  align-items: center;
 }
 
 .content__profile p {
   flex-grow: 1;
+}
+
+.content__profile p,
+.content__experience p {
+  margin-bottom: 1em;
 }
 
 .box-item {
@@ -357,11 +368,6 @@ footer {
   border-bottom-left-radius: 10px;
   background-color: rgba(0,0,0,0.8);
   width: 100%;
-}
-
-.content__profile p,
-.content__experience p {
-  margin-bottom: 1em;
 }
 
 .social-icons {
