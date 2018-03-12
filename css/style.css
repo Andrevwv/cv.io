@@ -134,10 +134,11 @@ a {
   transition: transform 1s;
   background-color: rgba(0,0,0,0.6);
   border-radius: 10px;
+  cursor: pointer;
+
 }
 
 .skill-item:hover .svg-transform,
-.skill-item:focus .svg-transform,
 .skill-item:active .svg-transform{
   transform-origin: top;
   transform: scale(2.2) translateY(-55%);
@@ -149,7 +150,6 @@ a {
 }
 
 .skill-item.java-item:hover .svg-transform,
-.skill-item.java-item:focus .svg-transform,
 .skill-item.java-item:active .svg-transform{
   transform: scale(2) translateY(-45%);
 }
@@ -181,11 +181,9 @@ a {
   transform: translatex(-150px);
   font-size: 0.8em;
   padding-left: 2em;
-
 }
 
 .skill-item:hover .skill-knowlage li,
-.skill-item:focus .skill-knowlage li,
 .skill-item:active .skill-knowlage li {
   text-align: left;
   transform: translateX(0);
@@ -195,7 +193,6 @@ a {
 }
 
 .skill-item:active .details,
-.skill-item:focus .details,
 .skill-item:hover .details {
   height: 300%;
 }
