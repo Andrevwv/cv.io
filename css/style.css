@@ -340,7 +340,10 @@ header {
 .svg-container {
   overflow: hidden;
   z-index: 1;
+  height: 160px;
   position: relative;
+  transition-duration: .5s;
+
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -354,7 +357,7 @@ header {
   -ms-flex-direction: column;
   flex-direction: column;
   background-color: rgba(0,0,0,0.3);
-  height: 20%;
+  height: 40px;
   width: 100%;
   overflow: hidden;
   -webkit-transition: all 0.5s;
@@ -397,7 +400,10 @@ header {
 }
 
 .skill-item:hover .details {
-  height: 300%;
+  height: 160px;
+}
+.skill-item:hover .svg-container {
+  height: 40px;
 }
 
 .disabled {
