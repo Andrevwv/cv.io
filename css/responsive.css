@@ -46,4 +46,10 @@
     .experience-image {
         margin-right: 0.5em;
     }
+
+    .svg-transform {
+        -webkit-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s;
+    }
 }
