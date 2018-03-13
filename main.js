@@ -56,6 +56,7 @@
               var currentContentBlock = document.querySelector('div.content__' + evt.currentTarget.dataset.id);
               var mainBlockCurrentHeight = mainBlock.offsetHeight;
               addDisabledClass(mainBlockSections);
+              // setTimeout(function() {currentContentBlock.classList.remove('disabled')}, 1000);
               currentContentBlock.classList.remove('disabled');
               var oldBlock = removeCurrentItemClass();
               // setMainBlockHeight(currentContentBlock, mainBlockCurrentHeight, document.querySelector('div.' + oldBlock.dataset.id));
