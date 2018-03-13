@@ -48,8 +48,8 @@
     }
 
     .svg-transform {
-        -webkit-transition: all 1s;
-        -o-transition: all 1s;
-        transition: all 1s;
+        -webkit-transition: all 0.25s;
+        -o-transition: all 0.25s;
+        transition: all 0.25s;
     }
 }
