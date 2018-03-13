@@ -282,6 +282,9 @@ header {
 .svg-javascript,
 .svg-java {
   fill: var(--main-color);
+  z-index: -1;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .skill-item {
@@ -338,6 +341,7 @@ header {
 
 .svg-container {
   overflow: hidden;
+  z-index: 1;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
