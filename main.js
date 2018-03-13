@@ -47,6 +47,10 @@
       // }
   };
 
+  var setGradient = function (colorTop, colorBottom) {
+
+  }
+
     /**
      * Function changes information block corresponding to menu item pressed
      */
