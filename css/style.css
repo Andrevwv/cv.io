@@ -557,6 +557,10 @@ header {
   outline: none;
 }
 
+.mail-adress {
+  font-size: 0.7em;
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
