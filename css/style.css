@@ -269,7 +269,6 @@ header {
 
 .main__photo {
   border-radius: 50%;
-  height: 130px;
   margin-bottom: 1em;
   -webkit-filter: contrast(1.2);
   filter: contrast(1.2);
@@ -325,21 +324,9 @@ header {
   -webkit-transform-origin: top;
   -ms-transform-origin: top;
   transform-origin: top;
-  -webkit-transform: scale(2.2) translateY(-55%);
-  -ms-transform: scale(2.2) translateY(-55%);
-  transform: scale(2.2) translateY(-55%);
-}
-
-.javascript-item:hover .svg-transform {
-  -webkit-transform: scale(2) translateY(-67%);
-  -ms-transform: scale(2) translateY(-67%);
-  transform: scale(2) translateY(-67%);
-}
-
-.java-item:hover .svg-transform {
-  -webkit-transform: scale(2) translateY(-45%);
-  -ms-transform: scale(2) translateY(-45%);
-  transform: scale(2) translateY(-45%);
+  -webkit-transform: scale(2.2) translateY(-45%);
+  -ms-transform: scale(2.2) translateY(-45%);
+  transform: scale(2.2) translateY(-45%);
 }
 
 .svg-container {
@@ -426,7 +413,6 @@ header {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-start;
-  margin-top: 1.5em;
 }
 
 .inspiration__site {
@@ -436,10 +422,10 @@ header {
   justify-content: flex-start;
   align-items: center;
   max-width: 150px;
+  margin-top: 1.5em;
 }
 
 .inspiration__site:hover .site__image {
-  box-shadow: none;
   filter: brightness(1.5);
 }
 
@@ -483,7 +469,7 @@ header {
 }
 
 .content__profile p,
-.content__experience p {
+.content__experience h3 {
   margin-bottom: 1em;
 }
 
@@ -619,34 +605,17 @@ footer {
   font-style: normal;
   font-weight: normal;
   speak: none;
-
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
   margin-right: .2em;
   text-align: center;
-  /* opacity: .8; */
-
-  /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal;
   text-transform: none;
-
-  /* fix buttons height, for twitter bootstrap */
   line-height: 1em;
-
-  /* Animation center compensation - margins should be symmetric */
-  /* remove if not needed */
   margin-left: .2em;
-
-  /* You can be more comfortable with increased icons size */
-  /* font-size: 120%; */
-
-  /* Font smoothing. That was taken from TWBS */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  /* Uncomment for 3D effect */
-  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
 .github,
