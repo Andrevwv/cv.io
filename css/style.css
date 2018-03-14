@@ -149,6 +149,14 @@ header {
   margin-left: 0.3em;
 }
 
+.menu li:focus {
+  box-shadow: 0 0 2px 0 #51a7e8;
+}
+
+.menu__button:focus {
+  outline: none;
+}
+
 .menu__button {
   z-index: 1;
   display: -webkit-box;
@@ -314,6 +322,16 @@ header {
   border-radius: 10px;
 }
 
+.skill-item:focus > svg-container{
+  box-shadow: 0 0 2px 0 #51a7e8;
+}
+
+.skill-item:focus  > svg-container,
+.skill-item:focus {
+  outline: none;
+}
+
+
 .svg-transform {
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -351,9 +369,9 @@ header {
   height: 40px;
   width: 100%;
   overflow: hidden;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: height 0.5s;
+  -o-transition: height 0.5s;
+  transition: height 0.5s;
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;

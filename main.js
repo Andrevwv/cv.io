@@ -1,12 +1,9 @@
 (function () {
   var mainBlockSections = document.querySelectorAll('.content > div');
   var mainMenuItems = document.querySelectorAll('.menu__button');
-  var mainBlock = document.querySelector('.main');
   var menu = document.querySelector('.menu');
   var footer = document.querySelector('footer');
   var content = document.querySelector('.content');
-  var menuHeight = menu.offsetHeight;
-  var footerHeight = footer.offsetHeight;
   var themeButtons = document.querySelectorAll('.theme__color-button');
   var root = document.documentElement;
   var background = document.querySelector('.background');
@@ -38,15 +35,6 @@
       return currentMenuItem;
   };
 
-  var setMainBlockHeight = function (activeBlock, mainBlockHeight, oldBlock) {
-      // if (activeBlock.offsetHeight > 200) {
-      //     mainBlock.style.height = mainBlockHeight + (activeBlock.offsetHeight - oldBlock.offsetHeight ) + 'px';
-      // } else {
-      console.log(activeBlock.parentNode.offsetHeight);
-          mainBlock.style.height = activeBlock.parentNode.offsetHeight + menuHeight + footerHeight + 'px';
-      // }
-  };
-
     /**
      * Function changes information block corresponding to menu item pressed
      */
@@ -54,12 +42,9 @@
        for (var j = 0; j < mainMenuItems.length; j++) {
           mainMenuItems[j].addEventListener('click', function (evt) {
               var currentContentBlock = document.querySelector('div.content__' + evt.currentTarget.dataset.id);
-              var mainBlockCurrentHeight = mainBlock.offsetHeight;
               addDisabledClass(mainBlockSections);
-              // setTimeout(function() {currentContentBlock.classList.remove('disabled')}, 1000);
               currentContentBlock.classList.remove('disabled');
-              var oldBlock = removeCurrentItemClass();
-              // setMainBlockHeight(currentContentBlock, mainBlockCurrentHeight, document.querySelector('div.' + oldBlock.dataset.id));
+              removeCurrentItemClass();
               evt.currentTarget.classList.add('menu__button--current');
           });
       }
@@ -108,7 +93,6 @@
       }
   };
 
-    addHandlerToThemeButtons();
-  // mainBlock.style.height = mainBlock.offsetHeight + 'px';
+  addHandlerToThemeButtons();
   changeSection();
 })();
