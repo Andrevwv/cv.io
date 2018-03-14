@@ -278,8 +278,6 @@ header {
 .main__photo {
   border-radius: 50%;
   margin-bottom: 1em;
-  -webkit-filter: contrast(1.2);
-  filter: contrast(1.2);
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   -o-transition: transform 0.5s;
@@ -322,16 +320,6 @@ header {
   border-radius: 10px;
 }
 
-.skill-item:focus > svg-container{
-  box-shadow: 0 0 2px 0 #51a7e8;
-}
-
-.skill-item:focus  > svg-container,
-.skill-item:focus {
-  outline: none;
-}
-
-
 .svg-transform {
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -369,9 +357,9 @@ header {
   height: 40px;
   width: 100%;
   overflow: hidden;
-  -webkit-transition: height 0.5s;
-  -o-transition: height 0.5s;
-  transition: height 0.5s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
@@ -539,7 +527,6 @@ header {
 }
 
 .theme__color-button {
-  padding: 0.2em 0.5em;
   margin-right: 3px;
   opacity: 0.5;
   border-radius: 10px;
@@ -554,6 +541,20 @@ header {
 .theme__color-button:active {
   -webkit-filter: brightness(60%);
   filter: brightness(60%);
+}
+
+.theme__color-button span {
+  padding: 0.2em 0.5em;
+}
+
+
+.theme__color-button:focus > span {
+  box-shadow: 0 0 2px 2px #51a7e8;
+}
+
+.theme__color-button:focus,
+.theme__color-button span:focus{
+  outline: none;
 }
 
 footer {

@@ -38,24 +38,37 @@
     /**
      * Function changes information block corresponding to menu item pressed
      */
+  var changeContent = function(target) {
+      var currentContentBlock = document.querySelector('div.content__' + target.dataset.id);
+      addDisabledClass(mainBlockSections);
+      currentContentBlock.classList.remove('disabled');
+      removeCurrentItemClass();
+      target.classList.add('menu__button--current');
+    };
+
+    /**
+     * Function add event listeners to menu buttons
+     */
   var changeSection = function () {
        for (var j = 0; j < mainMenuItems.length; j++) {
           mainMenuItems[j].addEventListener('click', function (evt) {
-              var currentContentBlock = document.querySelector('div.content__' + evt.currentTarget.dataset.id);
-              addDisabledClass(mainBlockSections);
-              currentContentBlock.classList.remove('disabled');
-              removeCurrentItemClass();
-              evt.currentTarget.classList.add('menu__button--current');
+              changeContent(evt.currentTarget);
+          });
+
+           mainMenuItems[j].parentNode.addEventListener('keydown', function (evt) {
+              if (evt.key === 'Enter') {
+                  changeContent(evt.currentTarget.querySelector('.menu__button'));
+              }
           });
       }
   };
 
     /**
      * Changes color scheme of the page, when color-button is clicked
-     * @param {event} evt
+     * @param {Node} target
      */
-  var colorButtonClickHandler = function (evt) {
-      switch (evt.target.dataset.id) {
+  var changeTheme = function (target) {
+      switch (target.dataset.id) {
           case 'red':
               root.style.setProperty('--main-color', '#ce4f4a');
               root.style.setProperty('--selection-color', 'rgba(206, 79, 74, 0.99)');
@@ -80,7 +93,20 @@
               background.style.backgroundImage = 'linear-gradient(to bottom, rgba(204, 153, 51,.5) 10%, rgba(53, 196, 53,.6) 90%)';
               mainPhoto.style.filter = 'grayscale(0)';
               break;
+      }
+  };
 
+    /**
+     * Changes color scheme of the page, when color-button is clicked
+     * @param {event} evt
+     */
+  var colorButtonClickHandler = function (evt) {
+        changeTheme(evt.currentTarget);
+  };
+
+  var colorButtonKeyDownHandler = function (evt) {
+      if (evt.key === 'Enter') {
+          changeTheme(evt.target);
       }
   };
 
@@ -90,6 +116,7 @@
   var addHandlerToThemeButtons = function () {
       for (var i = 0; i < themeButtons.length; i++) {
           themeButtons[i].addEventListener('click', colorButtonClickHandler);
+          themeButtons[i].parentNode.addEventListener('keydown', colorButtonKeyDownHandler);
       }
   };
 
