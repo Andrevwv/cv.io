@@ -74,24 +74,28 @@
               root.style.setProperty('--selection-color', 'rgba(206, 79, 74, 0.99)');
               background.style.backgroundImage = 'linear-gradient(to bottom, rgba(1, 160, 228,.5) 10%, rgba(209, 58, 41,.5) 90%)';
               mainPhoto.style.filter = 'grayscale(0)';
+              document.querySelector('.inspiration').style.filter = 'grayscale(0)';
               break;
           case 'gray':
-              root.style.setProperty('--main-color', '#424242');
+              root.style.setProperty('--main-color', '#bcbcbc');
               root.style.setProperty('--selection-color', 'rgba(66, 66, 66, 0.99)');
               background.style.backgroundImage = 'linear-gradient(to bottom, rgba(153, 153, 153,.5) 10%, rgba(22, 22, 22,.5) 90%)';
-              mainPhoto.style.filter = 'grayscale(0.9)';
+              mainPhoto.style.filter = 'grayscale(1)';
+              document.querySelector('.inspiration').style.filter = 'grayscale(1)';
               break;
           case 'blue':
               root.style.setProperty('--main-color', '#2C8BB8');
               root.style.setProperty('--selection-color', 'rgba(0, 125, 188, 0.99)');
               background.style.backgroundImage = 'linear-gradient(to bottom, rgba(157, 72, 99,.5) 10%, rgba(17, 59, 99,.7) 90%)';
               mainPhoto.style.filter = 'grayscale(0)';
+              document.querySelector('.inspiration').style.filter = 'grayscale(0)';
               break;
           case 'green':
               root.style.setProperty('--main-color', '#5fb522');
               root.style.setProperty('--selection-color', 'rgba(66, 188, 0, 0.99)');
               background.style.backgroundImage = 'linear-gradient(to bottom, rgba(204, 153, 51,.5) 10%, rgba(53, 196, 53,.6) 90%)';
               mainPhoto.style.filter = 'grayscale(0)';
+              document.querySelector('.inspiration').style.filter = 'grayscale(0)';
               break;
       }
   };
