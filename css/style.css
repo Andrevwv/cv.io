@@ -428,6 +428,11 @@ header {
   justify-content: space-around;
   -webkit-box-align: start;
   align-items: flex-start;
+  padding-bottom: 50px;
+}
+
+.inspiration:last-child {
+  padding-bottom: 0;
 }
 
 .inspiration__site {
@@ -508,6 +513,18 @@ header {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 1em;
+  text-align: left;
+  align-items: flex-start;
+}
+
+.box-item__responsibilities {
+  list-style: circle;
+  margin-left: 25px;
+}
+
+.box-item__list {
+  list-style: circle;
+  margin-left: 25px;
 }
 
 .box-item__text {
